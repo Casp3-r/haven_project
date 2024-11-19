@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        zoom: 90%;
+    }
+
+    .home-button:hover,
+    .market-button:hover,
+    .ass-button:hover,
+    .port-button:hover,
+    .agent-button:hover {
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+
+    .mid-buttons-div {
+        scroll-behavior: smooth;
+    }
+
+    .mid-buttons-div::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .fw-bolder {
+        font-weight: 600;
+    }
+
+    .buy-button,
+    .invest-button,
+    .hire-button {
+        background-color: white;
+        transition: 0.5s ease-in-out;
+        border: none;
+    }
+
+    .buy-button:hover,
+    .invest-button:hover,
+    .hire-button:hover {
+        background-color: black;
+        color: white;
+        transition: 0.5s ease-in-out;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body class=" bg-gray-100">
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top mb-7 p-3">
+        <div class="flask-ach">
+            <a href="#" class="logo-icon d-flex align-items-center">
+                <img src="./icons/Screenshot (120).png" alt="Logo" class="logo h-10 w-10" />
+                <h4 class="ml-4">
+                    Total Assets =<br />
+                    <span class="text-gray-600">0.00 NGN ~ 0.00000 USD</span>
+                </h4>
+            </a>
+        </div>
+        <ul class="navbar-nav ms-auto">
+            <!-- Logout Buttons -->
+            <li class="nav-item">
+                <a href="#" class="btn btn-light text-black fw-bolder  ml-7 me-2">Notifications</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="btn btn-light text-black fw-bolder  ml-7  me-2">Chat</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="btn btn-light text-black fw-bolder ml-7 me-2">AI Assistant</a>
+            </li>
+            <!-- User Icon Button -->
+            <li class="nav-item">
+                <a href="#" class="btn bg-transparent p-0">
+                    <img src="./icons/icons8-user-96.png" alt="User" class="user-image ml-7"
+                        style="height: 32px; width: 32px;">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container w-full h-[460px] bg-cover bg-fixed rounded-3xl flex flex-col items-center justify-center"
+        style="background-image: url('./houses/315976c93bfabb16d65f65449dc9e0b9.jpg');">
+        <div class="search-buttons flex justify-center mb-10 bg-white rounded-2xl">
+            <a href="#"><button class="buy-button  text-black font-bold  rounded-2xl h-14 w-28">Buy</button></a>
+            <a href="#"><button class="invest-button text-black font-bold rounded-2xl h-14 w-28">Invest</button></a>
+            <a href="#"><button class="hire-button text-black font-bold rounded-2xl h-14 w-28">Hire</button></a>
+        </div>
+        <div class="search-bar flex justify-center w-full h-14 mb-4">
+            <button class="filter-button bg-opacity-80 bg-white font-bold rounded p-2 mr-2">
+                <select class="select bg-transparent border-none outline-none">
+                    <option value="">Filter</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </select>
+            </button>
+            <div class="search-div flex justify-start items-center bg-opacity-80 bg-white rounded h-full w-1/2">
+                <button class="ml-2 bg-none">
+                    <img src="./icons/icons8-search-100.png" alt="Search Icon" class="searchicon h-5 w-5" />
+                </button>
+                <input type="search" placeholder="Search"
+                    class="search-input border-none outline-none bg-transparent h-full w-full pl-2 pr-2" />
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-below-box flex justify-evenly items-center h-10 mt-9">
+        <a href="#"><button class="home-button  font-bold rounded h-14 w-36">Home</button></a>
+        <a href="#"><button class="market-button  font-bold rounded h-14 w-36">Markets</button></a>
+        <a href="#"><button class="ass-button  font-bold rounded h-14 w-36">AI Assistant</button></a>
+        <a href="#"><button class="port-button  font-bold rounded h-14 w-36">Portfolio</button></a>
+        <a href="#"><button class="agent-button  font-bold rounded h-14 w-36">Agents</button></a>
+    </div>
+    <div class="display-div flex mt-10">
+        <div class="icon-div flex justify-center items-center">
+            <button class="icon bg-black text-white rounded-full w-12 h-12" onclick="scroll1()">
+                <img src="./icons/icons8-left-50.png" alt="" class="left-arrow w-7 h-7 ml-2">
+            </button>
+        </div>
+        <div class="mid-buttons-div flex overflow-x-auto w-full">
+
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-div flex flex-col min-w-[470px] bg-white  rounded-lg p-4 mx-2">
+                <img src="./houses/19f4d7c2786d069c9dfd57fe16c94776.jpg" alt="Property"
+                    class="mid-buttons w-full h-48 object-cover rounded-t-lg" />
+                <div class="image-info mt-2 bg-gray-200 rounded-b-lg p-4">
+                    <h2 class="span text-xl font-semibold">Brand New Luxury 5 Bedroom Mansion at Asokoro</h2>
+                    <div class="info-container flex flex-col mt-2">
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bed-50.png" alt="Bedrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">5 Bedrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-bath-64.png" alt="Restrooms" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">4 Restrooms</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-price-tag-50.png" alt="Price" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">N1,500,000,000</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-location-50 (1).png" alt="Location"
+                                class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">Otaku, Old Government House</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-phone-50 (1).png" alt="Contact" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">0801667728</span>
+                        </div>
+                        <div class="house-info flex items-center">
+                            <img src="./icons/icons8-size-50.png" alt="Size" class="house-icons w-5 h-5 mr-2" />
+                            <span class="main-info">400 sqr feet</span>
+                        </div>
+                    </div>
+                    <div class="the-thing flex flex-col items-center mt-4 ">
+                        <div class="house-user-div flex items-center mr-2">
+                            <img src="./icons/icons8-male-user-48 (1).png" alt="Realtor"
+                                class="house-user rounded-full" />
+                            <span class="realtor-text font-semibold">Realtor</span>
+                        </div>
+                        <div class="chat-and-ai flex justify-between mt-2 bg-black h-10 w-1/4 p-2 rounded-2xl">
+                            <button class="chat-icon-button bg-none">
+                                <img src="./icons/icons8-chat-50.png" class="chat-icon w-5 h-5" />
+                            </button>
+                            <button class="ai-icon-button bg-none">
+                                <img src="./icons/icons8-ai-50.png" class="ai-icon w-5 h-5 " />
+                            </button>
+                        </div>
+                        <div class="below-the-thing flex justify-between w-full mt-4">
+                            <button class="heart-button bg-none">
+                                <img src="./icons/icons8-heart-32.png" alt="Favorite" class="heart w-8 h-8 " />
+                            </button>
+                            <button class="cart-button bg-none">
+                                <img src="./icons/icons8-cart-50.png" alt="Cart" class="cart w-8 h-8" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-div flex justify-center items-center">
+            <button class="icon bg-black text-white rounded-full w-12 h-12" onclick="scroll4()">
+                <img src="./icons/icons8-right-50.png" alt="" class="right-arrow w-7 h-7 ml-2">
+            </button>
+        </div>
+    </div>
+    <!-- Testimonial Section Title -->
+    <h1 class="flex py-5 font-bold text-gray-800 text-3xl justify-center">About us</h1>
+
+    <!-- Testimonial Cards -->
+    <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-4 pb-5" id="testimonial">
+        <div class="rounded overflow-hidden shadow-lg bg-gray-100">
+            <div class="px-6 py-4">
+                <div class="flex font-bold text-xl mb-2 justify-center">Frank Jay</div>
+                <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                    perferendis eaque, exercitationem praesentium nihil.
+                </p>
+            </div>
+            <div class="flex justify-center py-2">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="text-yellow-500 w-5 h-auto fill-current hover:text-red-600" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                    <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="rounded overflow-hidden shadow-lg bg-gray-100">
+            <div class="px-6 py-4">
+                <div class="flex font-bold text-xl mb-2 justify-center">John Samuel</div>
+                <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                    perferendis eaque, exercitationem praesentium nihil.
+                </p>
+                <div class="flex justify-center py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-red-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="rounded overflow-hidden shadow-lg bg-gray-100">
+            <div class="px-6 py-4">
+                <div class="flex font-bold text-xl mb-2 justify-center">Mary Jane</div>
+                <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+                    perferendis eaque, exercitationem praesentium nihil.
+                </p>
+                <div class="flex justify-center py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-red-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="text-yellow-500 w-5 h-auto fill-current hover:text-yellow-600" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="testimonials" class=" py-20 mb-10 bg-black text-white">
+        <div class="container ">
+            <h2 class="text-3xl fw-bold text-center mb-5">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <p class="fs-4 fst-italic">"Amazing experience with HAVEN! Highly recommended."</p>
+                        <p class="fw-bold">- Daniel King</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p class="fs-4 fst-italic">"Professional and dedicated service all the way!"</p>
+                        <p class="fw-bold">- David Itoro</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <div class="flex flex-col bg-black  justify-center items-center text-white text-xl p-6 mt-3"
+        style="background-image:url('./houses/1ccb1d9fdac43ca4001afce9d73e9076.jpg');">
+        <h1 class="text-xl font-bold text-white mb-3">Around the web</h1>
+        <div class="flex flex-row mb-3">
+            <svg class="h-6 w-6 mr-3 " xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+            </svg>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+            </svg>
+        </div>
+        <p">@Copyright David Okafor 2024.</p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function scroll4() {
+            var left = document.querySelector(".mid-buttons-div");
+            left.scrollBy(350, 0);
+        }
+        function scroll1() {
+            var right = document.querySelector(".mid-buttons-div");
+            right.scrollBy(-350, 0);
+        }
+    </script>
+</body>
+</body>
+
+</html>
